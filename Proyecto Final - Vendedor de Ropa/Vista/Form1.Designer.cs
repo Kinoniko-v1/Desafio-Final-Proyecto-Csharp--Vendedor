@@ -44,7 +44,6 @@ namespace Vista
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -72,7 +71,7 @@ namespace Vista
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Cotizar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // checkBox1
@@ -107,11 +106,11 @@ namespace Vista
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 26);
+            this.textBox1.Location = new System.Drawing.Point(42, 23);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(75, 20);
+            this.textBox1.Size = new System.Drawing.Size(50, 20);
             this.textBox1.TabIndex = 18;
-            this.textBox1.Text = "$";
+            this.textBox1.Text = "...";
             // 
             // groupBox1
             // 
@@ -145,7 +144,6 @@ namespace Vista
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Location = new System.Drawing.Point(355, 201);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 55);
@@ -208,11 +206,11 @@ namespace Vista
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(116, 26);
+            this.textBox2.Location = new System.Drawing.Point(144, 23);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(75, 20);
+            this.textBox2.Size = new System.Drawing.Size(37, 20);
             this.textBox2.TabIndex = 18;
-            this.textBox2.Text = "Cant:";
+            this.textBox2.Text = "...";
             // 
             // textBox3
             // 
@@ -222,21 +220,12 @@ namespace Vista
             this.textBox3.TabIndex = 13;
             this.textBox3.Text = "Unidades de stock disponibles: ";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(154, 28);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(124, 20);
-            this.textBox4.TabIndex = 14;
-            this.textBox4.Text = "Cotización al por Mayor";
-            // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(355, 321);
+            this.textBox5.Location = new System.Drawing.Point(377, 321);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 15;
-            this.textBox5.Text = "$";
             // 
             // button2
             // 
@@ -249,20 +238,20 @@ namespace Vista
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 29);
+            this.label2.Location = new System.Drawing.Point(23, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(13, 13);
             this.label2.TabIndex = 17;
-            this.label2.Text = "label2";
+            this.label2.Text = "$";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(150, 29);
+            this.label3.Location = new System.Drawing.Point(106, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 17;
-            this.label3.Text = "label3";
+            this.label3.Text = "Cant:";
             // 
             // label4
             // 
@@ -321,20 +310,20 @@ namespace Vista
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(389, 324);
+            this.label10.Location = new System.Drawing.Point(358, 324);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.Size = new System.Drawing.Size(13, 13);
             this.label10.TabIndex = 25;
-            this.label10.Text = "label10";
+            this.label10.Text = "$";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(150, 28);
+            this.label11.Location = new System.Drawing.Point(159, 30);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.Size = new System.Drawing.Size(117, 13);
             this.label11.TabIndex = 26;
-            this.label11.Text = "label11";
+            this.label11.Text = "Cotización al por Mayor";
             // 
             // label12
             // 
@@ -385,6 +374,7 @@ namespace Vista
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -394,7 +384,6 @@ namespace Vista
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.groupBox1);
@@ -430,7 +419,6 @@ namespace Vista
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
