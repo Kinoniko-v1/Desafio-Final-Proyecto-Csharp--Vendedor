@@ -3,25 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Dominio.TiposDePrenda;
 
 namespace Dominio
 {
-    class Prenda
+    public abstract class Prenda
     {
-        internal enum TipoCalidad {Standard, Premium };
         protected TipoCalidad calidad;
-        protected float precioUnitario;
+        protected double precioUnitario;
         protected int cantStock;
 
-        internal Prenda(TipoCalidad calidad, float precioUnitario, int cantStock)
+        internal Prenda(TipoCalidad calidad, double precioUnitario)
         {
             this.calidad = calidad;
             this.precioUnitario = precioUnitario;
-            this.cantStock = cantStock;
         }
 
         internal TipoCalidad Calidad { get => calidad; set => calidad = value; }
-        internal float PrecioUnitario { get => precioUnitario; set => precioUnitario = value; }
+        internal double PrecioUnitario { get => precioUnitario; set => precioUnitario = value; }
         internal int CantStock { get => cantStock; set => cantStock = value; }
     }
 }
