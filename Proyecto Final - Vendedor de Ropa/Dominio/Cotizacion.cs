@@ -34,17 +34,16 @@ namespace Dominio
 
         public void CrearPrenda(string prenda, string calidad, double precioUnitario, bool mao, bool corta, bool chupin)
         {
-            TipoCalidad calidadRopa = TipoCalidad.Standard;
-
-            if (calidad == "standard")
-                calidadRopa = TipoCalidad.Standard;
-            else if(calidad == "premium")
-                calidadRopa = TipoCalidad.Premium;
+            TipoCalidad calidadRopa = calidad == "standard" ? TipoCalidad.Standard : TipoCalidad.Premium;
 
             if (prenda == "camisa")
+            {
                 _camisa = new Camisa(calidadRopa, precioUnitario, mao, corta);
+            }
             else if (prenda == "pantalon")
+            {
                 _pantalon = new Pantalon(calidadRopa, precioUnitario, chupin);
+            }
         }
 
         public double CalcularCotizacion()
@@ -65,18 +64,10 @@ namespace Dominio
         {
             _resultado = prenda.PrecioUnitario;
 
-            if (prenda.Manga == TipoManga.corta && prenda.Cuello == TipoCuello.mao)
-            {
+            if (prenda.Manga == TipoManga.corta)
                 _resultado -= _resultado * 0.1;
+            if (prenda.Cuello == TipoCuello.mao)
                 _resultado += _resultado * 0.03;
-            }
-            else
-            {
-                if (prenda.Manga == TipoManga.corta)
-                    _resultado -= _resultado * 0.1;
-                else if (prenda.Cuello == TipoCuello.mao)
-                    _resultado += _resultado * 0.03;
-            }
 
             _resultado = CalcularCalidad(prenda.Calidad);
 
@@ -88,7 +79,9 @@ namespace Dominio
             _resultado = prenda.PrecioUnitario;
 
             if (prenda.Modelo == TipoPantalon.chupin)
+            {
                 _resultado -= _resultado * 0.12;
+            }
 
             _resultado = CalcularCalidad(prenda.Calidad);
 
@@ -98,7 +91,9 @@ namespace Dominio
         private double CalcularCalidad(TipoCalidad calidad)
         {
             if (calidad == TipoCalidad.Premium)
+            {
                 _resultado += (_resultado * 0.3);
+            }
 
             return _resultado;
         }

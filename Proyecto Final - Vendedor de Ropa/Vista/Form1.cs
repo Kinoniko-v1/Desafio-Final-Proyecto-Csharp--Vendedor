@@ -43,6 +43,9 @@ namespace Vista
         private void Cotizar_Click(object sender, EventArgs e)
         {
             // Asignar campos para pasarlos al presentador. Antes Validar.
+            _checkedMao = checkMao.Checked;
+            _checkedCorta = checkCorta.Checked;
+            _checkedChupin = checkChupin.Checked;
 
             if (botonStandard.Checked)
                 _calidad = botonStandard.Text.ToLower();
@@ -65,8 +68,6 @@ namespace Vista
                 checkCorta.Enabled = true;
                 checkMao.Enabled = true;
                 _prenda = "camisa";
-                _checkedMao = checkMao.Checked;
-                _checkedCorta = checkCorta.Checked;
             }
         }
 
@@ -78,7 +79,6 @@ namespace Vista
                 checkCorta.Enabled = false;
                 checkMao.Enabled = false;
                 _prenda = "pantalon";
-                _checkedChupin = checkChupin.Checked;
             }
         }
         #endregion
