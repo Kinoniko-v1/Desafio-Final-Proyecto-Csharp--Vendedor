@@ -17,7 +17,7 @@ namespace Vista
 
         private double _precioUnitario;
         private int _cantidad;
-        private string _prenda;
+        private string _prenda = "camisa";
         private string _calidad;
         private bool _checkedMao;
         private bool _checkedCorta;
@@ -26,11 +26,11 @@ namespace Vista
         public Form1()
         {
             InitializeComponent();
+            _Presentador = new Presentador(this);
         }
-        public void MostrarResultado()
+        public void MostrarResultado(string resultado)
         {
-
-            
+            resultadoCotizacion.Text = resultado;
         }
         public void LeerInput()
         {
@@ -44,17 +44,6 @@ namespace Vista
         {
             // Asignar campos para pasarlos al presentador. Antes Validar.
 
-            if (botonCamisa.Checked)
-            {
-                _prenda = "camisa";
-                _checkedMao = checkMao.Checked;
-                _checkedCorta = checkCorta.Checked;
-            }
-            else if (botonPantalon.Checked)
-            {
-                _prenda = "pantalon";
-                _checkedChupin = checkChupin.Checked;
-            }
             if (botonStandard.Checked)
                 _calidad = botonStandard.Text.ToLower();
             else if (botonPremium.Checked)
@@ -65,8 +54,33 @@ namespace Vista
             _precioUnitario = Convert.ToDouble(precioUnitarioInput.Text);
 
             _Presentador.Cotizar(_precioUnitario,_cantidad,_calidad,_prenda,_checkedChupin,_checkedCorta,_checkedMao);
-
-            MostrarResultado();
         }
+
+        #region Switch de Enabled
+        private void botonCamisa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (botonCamisa.Checked)
+            {
+                checkChupin.Enabled = false;
+                checkCorta.Enabled = true;
+                checkMao.Enabled = true;
+                _prenda = "camisa";
+                _checkedMao = checkMao.Checked;
+                _checkedCorta = checkCorta.Checked;
+            }
+        }
+
+        private void botonPantalon_CheckedChanged(object sender, EventArgs e)
+        {
+            if (botonPantalon.Checked)
+            {
+                checkChupin.Enabled = true;
+                checkCorta.Enabled = false;
+                checkMao.Enabled = false;
+                _prenda = "pantalon";
+                _checkedChupin = checkChupin.Checked;
+            }
+        }
+        #endregion
     }
 }

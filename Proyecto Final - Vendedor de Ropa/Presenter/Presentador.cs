@@ -13,7 +13,6 @@ namespace Presenter
         private Vendedor _vendedor;
 
         private Cotizacion _cotizacion;
-        private Prenda _prenda;
 
         private readonly IView _View;
 
@@ -38,8 +37,8 @@ namespace Presenter
 
             _cotizacion = new Cotizacion(_vendedor.CodigoVendedor,cantUnidades);
             _cotizacion.CrearPrenda(prendaTipo,calidad,precioUnitario,mao,corta,chupin);
-
             double resultado =_cotizacion.CalcularCotizacion();
+            _cotizacion.AlmacenarCotizacion();
 
             _View.MostrarResultado(resultado.ToString());
         }

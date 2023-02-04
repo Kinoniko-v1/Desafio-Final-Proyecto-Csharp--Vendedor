@@ -8,3 +8,8 @@ C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proy
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.exe
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.pdb
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\Presenter.dll
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\Dominio.dll
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\Presenter.pdb
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\Dominio.pdb
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.csproj.CopyComplete

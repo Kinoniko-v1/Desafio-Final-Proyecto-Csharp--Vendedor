@@ -88,7 +88,7 @@ namespace Vista
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(640, 301);
+            this.label1.Location = new System.Drawing.Point(669, 201);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 2;
@@ -105,6 +105,7 @@ namespace Vista
             this.botonCamisa.TabStop = true;
             this.botonCamisa.Text = "Camisa";
             this.botonCamisa.UseVisualStyleBackColor = true;
+            this.botonCamisa.CheckedChanged += new System.EventHandler(this.botonCamisa_CheckedChanged);
             // 
             // precioUnitarioInput
             // 
@@ -137,6 +138,7 @@ namespace Vista
             this.botonPantalon.TabStop = true;
             this.botonPantalon.Text = "Pantalón";
             this.botonPantalon.UseVisualStyleBackColor = true;
+            this.botonPantalon.CheckedChanged += new System.EventHandler(this.botonPantalon_CheckedChanged);
             // 
             // checkChupin
             // 
@@ -162,7 +164,7 @@ namespace Vista
             // botonMangaLarga
             // 
             this.botonMangaLarga.AutoSize = true;
-            this.botonMangaLarga.Location = new System.Drawing.Point(682, 223);
+            this.botonMangaLarga.Location = new System.Drawing.Point(673, 94);
             this.botonMangaLarga.Name = "botonMangaLarga";
             this.botonMangaLarga.Size = new System.Drawing.Size(84, 17);
             this.botonMangaLarga.TabIndex = 11;
@@ -173,7 +175,7 @@ namespace Vista
             // botonMangaCorta
             // 
             this.botonMangaCorta.AutoSize = true;
-            this.botonMangaCorta.Location = new System.Drawing.Point(656, 176);
+            this.botonMangaCorta.Location = new System.Drawing.Point(672, 59);
             this.botonMangaCorta.Name = "botonMangaCorta";
             this.botonMangaCorta.Size = new System.Drawing.Size(85, 17);
             this.botonMangaCorta.TabIndex = 12;
@@ -306,7 +308,7 @@ namespace Vista
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(637, 276);
+            this.label7.Location = new System.Drawing.Point(670, 180);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 22;
@@ -315,7 +317,7 @@ namespace Vista
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(645, 284);
+            this.label8.Location = new System.Drawing.Point(670, 158);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 23;
@@ -324,7 +326,7 @@ namespace Vista
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(653, 292);
+            this.label9.Location = new System.Drawing.Point(670, 132);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 24;

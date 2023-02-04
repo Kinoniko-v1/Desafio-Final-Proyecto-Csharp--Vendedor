@@ -34,22 +34,17 @@ namespace Dominio
 
         public void CrearPrenda(string prenda, string calidad, double precioUnitario, bool mao, bool corta, bool chupin)
         {
-            TipoCalidad calidadRopa;
+            TipoCalidad calidadRopa = TipoCalidad.Standard;
 
             if (calidad == "standard")
-                calidadRopa = TipoCalidad.Premium;
-            else
                 calidadRopa = TipoCalidad.Standard;
-
+            else if(calidad == "premium")
+                calidadRopa = TipoCalidad.Premium;
 
             if (prenda == "camisa")
-            {
                 _camisa = new Camisa(calidadRopa, precioUnitario, mao, corta);
-            }
             else if (prenda == "pantalon")
-            {
                 _pantalon = new Pantalon(calidadRopa, precioUnitario, chupin);
-            }
         }
 
         public double CalcularCotizacion()
@@ -63,11 +58,13 @@ namespace Dominio
             else
                 resultado = double.MaxValue;
 
-            return resultado;
+            return resultado * _cantUnidades;
         }
 
         private double CalcularCotizacion(Camisa prenda)
         {
+            _resultado = prenda.PrecioUnitario;
+
             if (prenda.Manga == TipoManga.corta && prenda.Cuello == TipoCuello.mao)
             {
                 _resultado -= _resultado * 0.1;
@@ -101,7 +98,8 @@ namespace Dominio
         private double CalcularCalidad(TipoCalidad calidad)
         {
             if (calidad == TipoCalidad.Premium)
-                _resultado += _resultado * 0.3;
+                _resultado += (_resultado * 0.3);
+
             return _resultado;
         }
     }

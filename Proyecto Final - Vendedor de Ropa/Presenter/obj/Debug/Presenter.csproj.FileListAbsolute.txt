@@ -1,2 +1,9 @@
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Debug\Presenter.csproj.AssemblyReference.cache
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Debug\Presenter.csproj.CoreCompileInputs.cache
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\bin\Debug\Presenter.dll
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\bin\Debug\Presenter.pdb
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\bin\Debug\Dominio.dll
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\bin\Debug\Dominio.pdb
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Debug\Presenter.csproj.CopyComplete
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Debug\Presenter.dll
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Debug\Presenter.pdb
