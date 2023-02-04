@@ -3,63 +3,106 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Dominio.TiposDePrenda;
 
 namespace Dominio
 {
-    class Cotizacion
+    public class Cotizacion
     {
-        private int identificacion;
-        private DateTime fechaHora;
-        private int codigoVendedor;
-        private Prenda prenda;
-        private int cantDeUnidades;
-        private float resultado;
-        
-        public void AlmacenarCotizacion()
+        private int _identificacion;
+        private DateTime _fechaHora;
+
+        private int _codigoVendedor;
+        private int _cantUnidades;
+        private Camisa _camisa;
+        private Pantalon _pantalon;
+
+        private double _resultado;
+
+        public Cotizacion(int codigoVendedor, int cantUnidades)
         {
-            
+            // Crear identificación.
+            _fechaHora = DateTime.Now;
+            _codigoVendedor = codigoVendedor;
+            _cantUnidades = cantUnidades;
         }
 
-        public float CalcularCotizacion(Camisa prenda)
+        public void AlmacenarCotizacion()
         {
-            float precioInicial = prenda.PrecioUnitario;
 
-            if (prenda.Manga == Camisa.TipoManga.corta && prenda.Cuello == Camisa.TipoCuello.mao)
+        }
+
+        public void CrearPrenda(string prenda, string calidad, double precioUnitario, bool mao, bool corta, bool chupin)
+        {
+            TipoCalidad calidadRopa;
+
+            if (calidad == "standard")
+                calidadRopa = TipoCalidad.Premium;
+            else
+                calidadRopa = TipoCalidad.Standard;
+
+
+            if (prenda == "camisa")
             {
-                    resultado -= resultado * 0.1f;
-                    resultado += resultado * 0.03f;
+                _camisa = new Camisa(calidadRopa, precioUnitario, mao, corta);
+            }
+            else if (prenda == "pantalon")
+            {
+                _pantalon = new Pantalon(calidadRopa, precioUnitario, chupin);
+            }
+        }
+
+        public double CalcularCotizacion()
+        {
+            double resultado;
+
+            if (_camisa != null)
+                resultado = CalcularCotizacion(_camisa);
+            else if (_pantalon != null)
+                resultado = CalcularCotizacion(_pantalon);
+            else
+                resultado = double.MaxValue;
+
+            return resultado;
+        }
+
+        private double CalcularCotizacion(Camisa prenda)
+        {
+            if (prenda.Manga == TipoManga.corta && prenda.Cuello == TipoCuello.mao)
+            {
+                _resultado -= _resultado * 0.1;
+                _resultado += _resultado * 0.03;
             }
             else
             {
-                if (prenda.Manga == Camisa.TipoManga.corta)
-                    resultado -= resultado * 0.1f;
-                else if (prenda.Cuello == Camisa.TipoCuello.mao)
-                    resultado += resultado * 0.03f;
+                if (prenda.Manga == TipoManga.corta)
+                    _resultado -= _resultado * 0.1;
+                else if (prenda.Cuello == TipoCuello.mao)
+                    _resultado += _resultado * 0.03;
             }
 
-            resultado = CalcularCotizacion(prenda.Calidad);
+            _resultado = CalcularCalidad(prenda.Calidad);
 
-            return resultado;
+            return _resultado;
         }
 
-        public float CalcularCotizacion(Pantalon prenda)
+        private double CalcularCotizacion(Pantalon prenda)
         {
-            resultado = prenda.PrecioUnitario;
+            _resultado = prenda.PrecioUnitario;
 
-            if (prenda.Modelo == Pantalon.TipoPantalon.chupin)
-                resultado -= resultado * 0.12f;
+            if (prenda.Modelo == TipoPantalon.chupin)
+                _resultado -= _resultado * 0.12;
 
-            resultado = CalcularCotizacion(prenda.Calidad);
+            _resultado = CalcularCalidad(prenda.Calidad);
 
-            return resultado;
+            return _resultado;
         }
 
-        private float CalcularCotizacion(Prenda.TipoCalidad calidad)
+        private double CalcularCalidad(TipoCalidad calidad)
         {
-            if (calidad == Prenda.TipoCalidad.Premium)
-                resultado += resultado * 0.3f;
-
-            return resultado;
+            if (calidad == TipoCalidad.Premium)
+                _resultado += _resultado * 0.3;
+            return _resultado;
         }
     }
 }

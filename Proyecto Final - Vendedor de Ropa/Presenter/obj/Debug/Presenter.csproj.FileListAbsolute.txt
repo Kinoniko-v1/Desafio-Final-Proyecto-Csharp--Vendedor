@@ -1,0 +1,2 @@
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Debug\Presenter.csproj.AssemblyReference.cache
+C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Debug\Presenter.csproj.CoreCompileInputs.cache

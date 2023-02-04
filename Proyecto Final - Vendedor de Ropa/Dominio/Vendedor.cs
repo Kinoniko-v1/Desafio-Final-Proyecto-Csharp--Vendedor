@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    class Vendedor
+    public class Vendedor
     {
         private string nombre;
         private string apellido;
         private int codigoVendedor;
 
-        public Vendedor(string nombre, string apellido)
+        public Vendedor(string nombre="Nicolas", string apellido="Quintana")
         {
             this.nombre = nombre;
             this.apellido = apellido;
             this.codigoVendedor = GenerarCodigo();
         }
+
+        public int CodigoVendedor { get => codigoVendedor; set => codigoVendedor = value; }
+
         public int GenerarCodigo()
         {
-            return int.MaxValue;
+            int random = new Random().Next();
+            return random;
         }
 
-        public void CrearCotización()
-        {
-
-        }
     }
 }

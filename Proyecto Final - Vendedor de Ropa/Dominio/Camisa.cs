@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Dominio.TiposDePrenda;
 
 namespace Dominio
 {
-    class Camisa : Prenda
+    public class Camisa : Prenda
     {
-        internal enum TipoManga { larga, corta};
-        internal enum TipoCuello { comun, mao};
-
         private TipoManga manga;
         private TipoCuello cuello;
 
-        public Camisa(TipoCalidad calidad, float precioUnitario, int cantStock, TipoManga manga, TipoCuello cuello)
-            : base(calidad, precioUnitario, cantStock)
+        public Camisa(TipoCalidad calidad, double precioUnitario, bool esCorta, bool esMao)
+            : base(calidad, precioUnitario)
         {
-            this.manga = manga;
-            this.cuello = cuello;
+            if (esMao)
+                this.cuello = TipoCuello.mao;
+            else
+                this.cuello = TipoCuello.comun;
+
+            if (esCorta)
+                this.manga = TipoManga.corta;
+            else
+                this.manga = TipoManga.larga;
         }
 
         internal TipoManga Manga { get => manga; set => manga = value; }
