@@ -52,14 +52,14 @@ namespace Vista
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.direccionTienda = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.vendedorInfo = new System.Windows.Forms.Label();
+            this.nombreTienda = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -264,7 +264,7 @@ namespace Vista
             // 
             // resultadoCotizacion
             // 
-            this.resultadoCotizacion.Location = new System.Drawing.Point(377, 319);
+            this.resultadoCotizacion.Location = new System.Drawing.Point(377, 322);
             this.resultadoCotizacion.Name = "resultadoCotizacion";
             this.resultadoCotizacion.Size = new System.Drawing.Size(100, 20);
             this.resultadoCotizacion.TabIndex = 15;
@@ -296,14 +296,14 @@ namespace Vista
             this.label5.TabIndex = 20;
             this.label5.Text = "Historial de Cotizaciones:";
             // 
-            // label6
+            // direccionTienda
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(394, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 13);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Dirección de la Tienda";
+            this.direccionTienda.AutoSize = true;
+            this.direccionTienda.Location = new System.Drawing.Point(394, 63);
+            this.direccionTienda.Name = "direccionTienda";
+            this.direccionTienda.Size = new System.Drawing.Size(114, 13);
+            this.direccionTienda.TabIndex = 21;
+            this.direccionTienda.Text = "Dirección de la Tienda";
             // 
             // label7
             // 
@@ -335,7 +335,7 @@ namespace Vista
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(358, 322);
+            this.label10.Location = new System.Drawing.Point(358, 325);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(13, 13);
             this.label10.TabIndex = 25;
@@ -350,23 +350,23 @@ namespace Vista
             this.label11.TabIndex = 26;
             this.label11.Text = "Cotización al por Mayor";
             // 
-            // label12
+            // vendedorInfo
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(100, 94);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(199, 13);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Nombre y Apellido del Vendedor | Código";
+            this.vendedorInfo.AutoSize = true;
+            this.vendedorInfo.Location = new System.Drawing.Point(100, 94);
+            this.vendedorInfo.Name = "vendedorInfo";
+            this.vendedorInfo.Size = new System.Drawing.Size(199, 13);
+            this.vendedorInfo.TabIndex = 27;
+            this.vendedorInfo.Text = "Nombre y Apellido del Vendedor | Código";
             // 
-            // label13
+            // nombreTienda
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(100, 63);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(106, 13);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Nombre de la Tienda";
+            this.nombreTienda.AutoSize = true;
+            this.nombreTienda.Location = new System.Drawing.Point(100, 63);
+            this.nombreTienda.Name = "nombreTienda";
+            this.nombreTienda.Size = new System.Drawing.Size(106, 13);
+            this.nombreTienda.TabIndex = 28;
+            this.nombreTienda.Text = "Nombre de la Tienda";
             // 
             // Form1
             // 
@@ -377,14 +377,14 @@ namespace Vista
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.botonMangaCorta);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.nombreTienda);
+            this.Controls.Add(this.vendedorInfo);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.direccionTienda);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
@@ -429,14 +429,14 @@ namespace Vista
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label direccionTienda;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label vendedorInfo;
+        private System.Windows.Forms.Label nombreTienda;
         private System.Windows.Forms.RadioButton botonMangaLarga;
         private System.Windows.Forms.RadioButton botonMangaCorta;
     }

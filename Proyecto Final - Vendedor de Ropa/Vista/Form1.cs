@@ -27,10 +27,36 @@ namespace Vista
         {
             InitializeComponent();
             _Presentador = new Presentador(this);
+            ActualizarDatosUsuario();
+            Text = "Realize su operación...";
         }
+        public void ModTitle(string msj)
+        {
+            if (msj != null)
+                Text = msj;
+            else
+                Text = "Error msj is null";
+        }
+        public void ActualizarDatosUsuario()
+        {
+            string nombreT = nombreTienda.Text;
+            string direccionT = direccionTienda.Text;
+            string infoVendedor = vendedorInfo.Text;
+
+            _Presentador.Actualizar(ref nombreT, ref direccionT, ref infoVendedor);
+
+            nombreTienda.Text = nombreT;
+            direccionTienda.Text = direccionT;
+            vendedorInfo.Text = infoVendedor;
+        }
+
         public void MostrarResultado(string resultado)
         {
             resultadoCotizacion.Text = resultado;
+            if (resultado != "-1")
+                Text = "¡Cotización realizada con éxito!";
+            else
+                Text = "Cotización fallida, cantidad ingresada superior al stock disponible.";
         }
         public void LeerInput()
         {
@@ -38,7 +64,8 @@ namespace Vista
         }
         private void Historial_Click(object sender, EventArgs e)
         {
-
+            VerHistorial historial = new VerHistorial(_Presentador.MostrarHistorial());
+            historial.Show();
         }
         private void Cotizar_Click(object sender, EventArgs e)
         {

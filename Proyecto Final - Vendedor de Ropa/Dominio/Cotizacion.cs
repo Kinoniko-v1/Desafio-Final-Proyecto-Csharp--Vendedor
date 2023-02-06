@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,16 @@ namespace Dominio
         private int _cantUnidades;
         private Camisa _camisa;
         private Pantalon _pantalon;
+        private string _prenda;
 
         private double _resultado;
+
+        public int Identificacion { get => _identificacion; }
+        public DateTime FechaHora { get => _fechaHora;}
+        public int CodigoVendedor { get => _codigoVendedor;}
+        public int CantUnidades { get => _cantUnidades;}
+        public double Resultado { get => _resultado;}
+        public string Prenda { get => _prenda; set => _prenda = value; }
 
         public Cotizacion(int codigoVendedor, int cantUnidades)
         {
@@ -25,11 +34,17 @@ namespace Dominio
             _fechaHora = DateTime.Now;
             _codigoVendedor = codigoVendedor;
             _cantUnidades = cantUnidades;
+            _resultado = double.NaN;
         }
 
         public void AlmacenarCotizacion()
         {
-
+            //Se llama a este método desde esta clase porque debe ser la encarga de validar el resultado,
+            //si aún no se ha calculado un resutlado, no debe dejar que se almacene.
+            if (_resultado != double.NaN)
+            {
+                ConexionBD.Almacenar(this);
+            }
         }
 
         public void CrearPrenda(string prenda, string calidad, double precioUnitario, bool mao, bool corta, bool chupin)
@@ -39,10 +54,12 @@ namespace Dominio
             if (prenda == "camisa")
             {
                 _camisa = new Camisa(calidadRopa, precioUnitario, mao, corta);
+                _prenda = $"{prenda} {calidad} {_camisa.Manga.ToString()} {_camisa.Cuello.ToString()}";
             }
             else if (prenda == "pantalon")
             {
                 _pantalon = new Pantalon(calidadRopa, precioUnitario, chupin);
+                _prenda = $"{prenda} {calidad} {_pantalon.Modelo.ToString()}";
             }
         }
 
@@ -57,7 +74,7 @@ namespace Dominio
             else
                 resultado = double.MaxValue;
 
-            return resultado * _cantUnidades;
+            return resultado;
         }
 
         private double CalcularCotizacion(Camisa prenda)
@@ -94,6 +111,7 @@ namespace Dominio
             {
                 _resultado += (_resultado * 0.3);
             }
+            _resultado *= _cantUnidades;
 
             return _resultado;
         }

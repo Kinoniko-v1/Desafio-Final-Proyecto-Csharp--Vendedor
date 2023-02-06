@@ -10,5 +10,7 @@ namespace Presenter
     {
         void MostrarResultado(string resultado);
         void LeerInput();
+        void ActualizarDatosUsuario();
+        void ModTitle(string msj);
     }
 }
