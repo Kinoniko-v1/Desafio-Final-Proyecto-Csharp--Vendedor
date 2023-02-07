@@ -31,15 +31,12 @@ namespace Vista
         {
             this.button1 = new System.Windows.Forms.Button();
             this.checkMao = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.botonCamisa = new System.Windows.Forms.RadioButton();
             this.precioUnitarioInput = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.botonPantalon = new System.Windows.Forms.RadioButton();
             this.checkChupin = new System.Windows.Forms.CheckBox();
             this.checkCorta = new System.Windows.Forms.CheckBox();
-            this.botonMangaLarga = new System.Windows.Forms.RadioButton();
-            this.botonMangaCorta = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.botonStandard = new System.Windows.Forms.RadioButton();
             this.botonPremium = new System.Windows.Forms.RadioButton();
@@ -52,14 +49,11 @@ namespace Vista
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.direccionTienda = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.vendedorInfo = new System.Windows.Forms.Label();
+            this.nombreTienda = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -84,15 +78,7 @@ namespace Vista
             this.checkMao.TabIndex = 1;
             this.checkMao.Text = "Cuello Mao";
             this.checkMao.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(669, 201);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.checkMao.CheckedChanged += new System.EventHandler(this.checkMao_CheckedChanged);
             // 
             // botonCamisa
             // 
@@ -109,9 +95,9 @@ namespace Vista
             // 
             // precioUnitarioInput
             // 
-            this.precioUnitarioInput.Location = new System.Drawing.Point(42, 23);
+            this.precioUnitarioInput.Location = new System.Drawing.Point(25, 23);
             this.precioUnitarioInput.Name = "precioUnitarioInput";
-            this.precioUnitarioInput.Size = new System.Drawing.Size(50, 20);
+            this.precioUnitarioInput.Size = new System.Drawing.Size(57, 20);
             this.precioUnitarioInput.TabIndex = 18;
             // 
             // groupBox1
@@ -150,6 +136,7 @@ namespace Vista
             this.checkChupin.TabIndex = 8;
             this.checkChupin.Text = "Chupín";
             this.checkChupin.UseVisualStyleBackColor = true;
+            this.checkChupin.CheckedChanged += new System.EventHandler(this.checkChupin_CheckedChanged);
             // 
             // checkCorta
             // 
@@ -160,28 +147,7 @@ namespace Vista
             this.checkCorta.TabIndex = 7;
             this.checkCorta.Text = "Manga corta";
             this.checkCorta.UseVisualStyleBackColor = true;
-            // 
-            // botonMangaLarga
-            // 
-            this.botonMangaLarga.AutoSize = true;
-            this.botonMangaLarga.Location = new System.Drawing.Point(673, 94);
-            this.botonMangaLarga.Name = "botonMangaLarga";
-            this.botonMangaLarga.Size = new System.Drawing.Size(84, 17);
-            this.botonMangaLarga.TabIndex = 11;
-            this.botonMangaLarga.TabStop = true;
-            this.botonMangaLarga.Text = "Manga larga";
-            this.botonMangaLarga.UseVisualStyleBackColor = true;
-            // 
-            // botonMangaCorta
-            // 
-            this.botonMangaCorta.AutoSize = true;
-            this.botonMangaCorta.Location = new System.Drawing.Point(672, 59);
-            this.botonMangaCorta.Name = "botonMangaCorta";
-            this.botonMangaCorta.Size = new System.Drawing.Size(85, 17);
-            this.botonMangaCorta.TabIndex = 12;
-            this.botonMangaCorta.TabStop = true;
-            this.botonMangaCorta.Text = "Manga corta";
-            this.botonMangaCorta.UseVisualStyleBackColor = true;
+            this.checkCorta.CheckedChanged += new System.EventHandler(this.checkCorta_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -205,6 +171,7 @@ namespace Vista
             this.botonStandard.TabStop = true;
             this.botonStandard.Text = "Standard";
             this.botonStandard.UseVisualStyleBackColor = true;
+            this.botonStandard.CheckedChanged += new System.EventHandler(this.botonStandard_CheckedChanged);
             // 
             // botonPremium
             // 
@@ -216,6 +183,7 @@ namespace Vista
             this.botonPremium.TabStop = true;
             this.botonPremium.Text = "Premium";
             this.botonPremium.UseVisualStyleBackColor = true;
+            this.botonPremium.CheckedChanged += new System.EventHandler(this.botonPremium_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -233,7 +201,7 @@ namespace Vista
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(106, 26);
+            this.label3.Location = new System.Drawing.Point(105, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 17;
@@ -242,7 +210,7 @@ namespace Vista
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 26);
+            this.label2.Location = new System.Drawing.Point(6, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 13);
             this.label2.TabIndex = 17;
@@ -250,13 +218,14 @@ namespace Vista
             // 
             // cantidadInput
             // 
-            this.cantidadInput.Location = new System.Drawing.Point(144, 23);
+            this.cantidadInput.Location = new System.Drawing.Point(143, 23);
             this.cantidadInput.Name = "cantidadInput";
-            this.cantidadInput.Size = new System.Drawing.Size(37, 20);
+            this.cantidadInput.Size = new System.Drawing.Size(51, 20);
             this.cantidadInput.TabIndex = 18;
             // 
             // stockDisponible
             // 
+            this.stockDisponible.Enabled = false;
             this.stockDisponible.Location = new System.Drawing.Point(512, 273);
             this.stockDisponible.Name = "stockDisponible";
             this.stockDisponible.Size = new System.Drawing.Size(43, 20);
@@ -264,7 +233,7 @@ namespace Vista
             // 
             // resultadoCotizacion
             // 
-            this.resultadoCotizacion.Location = new System.Drawing.Point(377, 319);
+            this.resultadoCotizacion.Location = new System.Drawing.Point(377, 322);
             this.resultadoCotizacion.Name = "resultadoCotizacion";
             this.resultadoCotizacion.Size = new System.Drawing.Size(100, 20);
             this.resultadoCotizacion.TabIndex = 15;
@@ -296,46 +265,19 @@ namespace Vista
             this.label5.TabIndex = 20;
             this.label5.Text = "Historial de Cotizaciones:";
             // 
-            // label6
+            // direccionTienda
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(394, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 13);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Dirección de la Tienda";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(670, 180);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "label7";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(670, 158);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "label8";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(670, 132);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "label9";
+            this.direccionTienda.AutoSize = true;
+            this.direccionTienda.Location = new System.Drawing.Point(394, 63);
+            this.direccionTienda.Name = "direccionTienda";
+            this.direccionTienda.Size = new System.Drawing.Size(114, 13);
+            this.direccionTienda.TabIndex = 21;
+            this.direccionTienda.Text = "Dirección de la Tienda";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(358, 322);
+            this.label10.Location = new System.Drawing.Point(358, 325);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(13, 13);
             this.label10.TabIndex = 25;
@@ -350,48 +292,42 @@ namespace Vista
             this.label11.TabIndex = 26;
             this.label11.Text = "Cotización al por Mayor";
             // 
-            // label12
+            // vendedorInfo
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(100, 94);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(199, 13);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Nombre y Apellido del Vendedor | Código";
+            this.vendedorInfo.AutoSize = true;
+            this.vendedorInfo.Location = new System.Drawing.Point(100, 94);
+            this.vendedorInfo.Name = "vendedorInfo";
+            this.vendedorInfo.Size = new System.Drawing.Size(199, 13);
+            this.vendedorInfo.TabIndex = 27;
+            this.vendedorInfo.Text = "Nombre y Apellido del Vendedor | Código";
             // 
-            // label13
+            // nombreTienda
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(100, 63);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(106, 13);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Nombre de la Tienda";
+            this.nombreTienda.AutoSize = true;
+            this.nombreTienda.Location = new System.Drawing.Point(100, 63);
+            this.nombreTienda.Name = "nombreTienda";
+            this.nombreTienda.Size = new System.Drawing.Size(106, 13);
+            this.nombreTienda.TabIndex = 28;
+            this.nombreTienda.Text = "Nombre de la Tienda";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.botonMangaLarga);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.botonMangaCorta);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.nombreTienda);
+            this.Controls.Add(this.vendedorInfo);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.direccionTienda);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.resultadoCotizacion);
             this.Controls.Add(this.stockDisponible);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -410,7 +346,6 @@ namespace Vista
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkMao;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton botonCamisa;
         private System.Windows.Forms.TextBox precioUnitarioInput;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -429,16 +364,11 @@ namespace Vista
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label direccionTienda;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.RadioButton botonMangaLarga;
-        private System.Windows.Forms.RadioButton botonMangaCorta;
+        private System.Windows.Forms.Label vendedorInfo;
+        private System.Windows.Forms.Label nombreTienda;
     }
 }
 

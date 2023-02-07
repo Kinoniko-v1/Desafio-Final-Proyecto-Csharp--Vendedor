@@ -20,6 +20,8 @@ namespace Dominio
         }
 
         public int CodigoVendedor { get => codigoVendedor; set => codigoVendedor = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Apellido { get => apellido; set => apellido = value; }
 
         public int GenerarCodigo()
         {

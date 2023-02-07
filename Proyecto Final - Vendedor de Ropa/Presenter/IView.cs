@@ -9,6 +9,8 @@ namespace Presenter
     public interface IView
     {
         void MostrarResultado(string resultado);
-        void LeerInput();
+        void ActualizarStock(int stock);
+        void ActualizarDatosUsuario();
+        void ManejarErrores(string msj);
     }
 }
