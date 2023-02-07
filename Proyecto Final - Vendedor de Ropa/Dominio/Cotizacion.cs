@@ -10,31 +10,40 @@ namespace Dominio
 {
     public class Cotizacion
     {
-        private int _identificacion;
         private DateTime _fechaHora;
 
         private int _codigoVendedor;
+        private Tienda _tienda;
+
         private int _cantUnidades;
         private Camisa _camisa;
         private Pantalon _pantalon;
+        private string _prendaCod;
         private string _prenda;
 
         private double _resultado;
 
-        public int Identificacion { get => _identificacion; }
         public DateTime FechaHora { get => _fechaHora;}
-        public int CodigoVendedor { get => _codigoVendedor;}
-        public int CantUnidades { get => _cantUnidades;}
+        public int CodigoVendedor { get => _codigoVendedor; set => _codigoVendedor = value; }
+        public int CantUnidades { get => _cantUnidades; set =>_cantUnidades = value; }
         public double Resultado { get => _resultado;}
+        public string PrendaCod {set => _prendaCod = value; }
         public string Prenda { get => _prenda; set => _prenda = value; }
+        public Tienda Tienda { get => _tienda; set => _tienda = value; }
 
-        public Cotizacion(int codigoVendedor, int cantUnidades)
+        public Cotizacion()
+        {
+            _fechaHora = DateTime.Now;
+            _resultado = double.NaN;
+        }
+        public Cotizacion(int codigoVendedor, int cantUnidades, Tienda tienda)
         {
             // Crear identificación.
             _fechaHora = DateTime.Now;
+            _resultado = double.NaN;
             _codigoVendedor = codigoVendedor;
             _cantUnidades = cantUnidades;
-            _resultado = double.NaN;
+            _tienda = tienda;
         }
 
         public void AlmacenarCotizacion()
@@ -67,13 +76,19 @@ namespace Dominio
         {
             double resultado;
 
-            if (_camisa != null)
-                resultado = CalcularCotizacion(_camisa);
-            else if (_pantalon != null)
-                resultado = CalcularCotizacion(_pantalon);
+            if(_cantUnidades < _tienda.ListadoPrendas[_prendaCod])
+            {
+                if (_camisa != null)
+                    resultado = CalcularCotizacion(_camisa);
+                else if (_pantalon != null)
+                    resultado = CalcularCotizacion(_pantalon);
+                else
+                    resultado = -3;
+            }
             else
-                resultado = double.MaxValue;
-
+            {
+                resultado = -2;
+            }
             return resultado;
         }
 

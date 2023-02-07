@@ -25,7 +25,7 @@ namespace Dominio
             }
 
         }
-        public static String CrearTablaHistorial()
+        public static string CrearTablaHistorial()
         {
             string msj;
             SqlConnection conexion = ConectarBD();
@@ -83,9 +83,9 @@ namespace Dominio
                 conexion.Close();
             }
         }
-        public static String LeerHistorial()
+        public static string LeerHistorial()
         {
-            String lista = "";
+            String tabla = "";
             string cadena = "select * from tablaCotizaciones";
 
             SqlConnection conexion = ConectarBD();
@@ -97,24 +97,88 @@ namespace Dominio
                 while (registro.Read())
                 {
                     double precio = Convert.ToDouble(registro["resultado"]);
-                    lista += "Id: " + registro["identificacion"].ToString() + " - ";
-                    lista += "Fecha y hora: " + registro["fechaHora"].ToString() + " - ";
-                    lista += "Código del Vendedor: " + registro["codVendedor"].ToString() + " - ";
-                    lista += "Prenda: " + registro["prenda"].ToString() + " - ";
-                    lista += "Cantidad Cotizada: " + registro["cantCotizada"].ToString() + " - ";
-                    lista += "Resultado de la Cotización: $ " + precio + ".|";
+                    tabla += "Id: " + registro["identificacion"].ToString() + " - ";
+                    tabla += "Fecha y hora: " + registro["fechaHora"].ToString() + " - ";
+                    tabla += "Código del Vendedor: " + registro["codVendedor"].ToString() + " - ";
+                    tabla += "Prenda: " + registro["prenda"].ToString() + " - ";
+                    tabla += "Cantidad Cotizada: " + registro["cantCotizada"].ToString() + " - ";
+                    tabla += "Resultado de la Cotización: $ " + precio + ".|";
                 }
             }
             catch (Exception e)
             {
-                lista = e.Message;
+                tabla = e.Message;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            return tabla;
+        }  
+
+        // Métodos a modo prueba. Funcionan sólo para emular una base de datos real.
+        public static void CrearTablaStock()
+        {
+            SqlConnection conexion = ConectarBD();
+            conexion.Open();
+            string cadena = "create table tablaStock(identificacion int primary key identity, prenda varchar(50), stock int)";
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+        public static void GuardarStock()
+        {
+            SqlConnection conexion = ConectarBD();
+            conexion.Open();
+            string cadena = "insert into tablaStock(prenda, stock) values ('PSCh',750),('PSCm',250),('PPCh',750),('PPCm',250),('CSCC',150),('CSCM',100),('CSLC',175),('CSLM',75),('CPCC',150),('CPCM',100),('CPLC',175),('CPLM',75)";
+
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            try
+            {
+                int xd = comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+        public static Dictionary<string,int> LeerStock()
+        {
+            Dictionary<string, int> lista = new Dictionary<string, int>();
+            SqlConnection conexion = ConectarBD();
+            conexion.Open();
+            string cadena = "select * from tablaStock";
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+
+            try
+            {
+                SqlDataReader registro = comando.ExecuteReader();
+                while (registro.Read())
+                {
+                    lista.Add(registro["prenda"].ToString(), Convert.ToInt32(registro["stock"]));
+                }
+            }
+            catch (Exception)
+            {
             }
             finally
             {
                 conexion.Close();
             }
             return lista;
-        }  
-        public static void CrearStock() { }
+        }
     }
 }

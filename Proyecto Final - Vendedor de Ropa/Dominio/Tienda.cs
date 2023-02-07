@@ -12,29 +12,39 @@ namespace Dominio
     {
         private string nombre;
         private string direccion;
-        public List<Prenda> listadoPrendas;
+        private Dictionary<string, int> listadoPrendas = new Dictionary<string, int>();
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Direccion { get => direccion; set => direccion = value; }
+        public Dictionary<string, int> ListadoPrendas { get => listadoPrendas;}
 
         public Tienda(string nombre = "MayorPrendista", string direccion = "Av. Siempre Vida 321")
         {
             this.nombre = nombre;
             this.direccion = direccion;
-        }
-        public void InstanciarPrenda(string prenda, string calidad, double precioUnitario, bool mao, bool corta, bool chupin)
-        {
-            TipoCalidad calidadRopa = calidad == "standard" ? TipoCalidad.Standard : TipoCalidad.Premium;
 
-            if (prenda == "camisa")
+            if(listadoPrendas.Count == 0)
             {
-                 new Camisa(calidadRopa, precioUnitario, mao, corta);
+                listadoPrendas = ConexionBD.LeerStock();
             }
-            else if (prenda == "pantalon")
-            {
-                 new Pantalon(calidadRopa, precioUnitario, chupin);
-                //_pantalon = new Pantalon(calidadRopa, precioUnitario, chupin);
-            }
+        }
+
+        private void GuardarStock()
+        {
+            listadoPrendas.Add("PSCh",750);
+            listadoPrendas.Add("PSCm",250);
+            listadoPrendas.Add("PPCh",750);
+            listadoPrendas.Add("PPCm",250);
+            
+            listadoPrendas.Add("CSCC",150);
+            listadoPrendas.Add("CSCM",100);
+            listadoPrendas.Add("CSLC",175);
+            listadoPrendas.Add("CSLM",75);
+            
+            listadoPrendas.Add("CPCC",150);
+            listadoPrendas.Add("CPCM",100);
+            listadoPrendas.Add("CPLC",175);
+            listadoPrendas.Add("CPLM",75);
         }
     }
 }

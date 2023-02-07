@@ -34,7 +34,6 @@ namespace Presenter
             // 
             // textBoxHistorial
             // 
-            this.textBoxHistorial.Enabled = false;
             this.textBoxHistorial.Location = new System.Drawing.Point(56, 28);
             this.textBoxHistorial.Multiline = true;
             this.textBoxHistorial.Name = "textBoxHistorial";
