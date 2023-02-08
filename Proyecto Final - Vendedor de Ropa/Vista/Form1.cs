@@ -41,6 +41,9 @@ namespace Vista
                     MessageBox.Show("No se puede Cotizar unidades por encima del Stock de la prenda.");
                 else if(msj == "stock")
                     MessageBox.Show("No se encontró registro de stock.");
+                else if(msj == "ingreso")
+                    MessageBox.Show("Error: algún/os campo/s no se han ingresado correctamente.");
+
             }
             else
                 Text = "Error msj is null";
@@ -82,7 +85,7 @@ namespace Vista
             if (ComprobarCampos() && ComprobarBotones())
                 _Presentador.Cotizar(_precioUnitario, _cantidad, _calidad, _prenda, _checkedChupin, _checkedCorta, _checkedMao);
             else
-                MessageBox.Show("Error: algún/os campo/s no se han ingresado correctamente");
+                ManejarErrores("ingreso");
         }
 
         private void botonCamisa_CheckedChanged(object sender, EventArgs e)
@@ -155,9 +158,15 @@ namespace Vista
             if (botonStandard.Checked | botonPremium.Checked)
             {
                 if (botonStandard.Checked)
+                {
                     _calidad = botonStandard.Text.ToLower();
+                    botonStandard.BackColor = Color.Transparent;
+                }
                 else if (botonPremium.Checked)
+                {
                     _calidad = botonPremium.Text.ToLower();
+                    botonPremium.BackColor = Color.Transparent;
+                }
             }
             else
             {
@@ -169,14 +178,22 @@ namespace Vista
             if (botonCamisa.Checked | botonPantalon.Checked)
             {
                 if (botonCamisa.Checked)
+                {
                     _prenda = "camisa";
+                    botonPantalon.BackColor = Color.Transparent;
+                    botonCamisa.BackColor = Color.Transparent;
+                }
                 else if (botonPantalon.Checked)
+                {
                     _prenda = "pantalon";
+                    botonPantalon.BackColor = Color.Transparent;
+                    botonCamisa.BackColor = Color.Transparent;
+                }
             }
             else
             {
-                botonPremium.BackColor = Color.Red;
-                botonStandard.BackColor = Color.Red;
+                botonCamisa.BackColor = Color.Red;
+                botonPantalon.BackColor = Color.Red;
                 comprobacion = false;
             }
 

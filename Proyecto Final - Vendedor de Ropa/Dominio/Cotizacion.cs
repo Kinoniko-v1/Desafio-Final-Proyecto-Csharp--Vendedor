@@ -12,43 +12,45 @@ namespace Dominio
     {
         private DateTime _fechaHora;
 
-        private int _codigoVendedor;
         private Tienda _tienda;
+        private Vendedor _vendedor;
 
         private int _cantUnidades;
+        private string _prenda;
         private Camisa _camisa;
         private Pantalon _pantalon;
-        private string _prendaCod;
-        private string _prenda;
 
         private double _resultado;
 
         public DateTime FechaHora { get => _fechaHora;}
-        public int CodigoVendedor { get => _codigoVendedor; set => _codigoVendedor = value; }
-        public int CantUnidades { get => _cantUnidades; set =>_cantUnidades = value; }
+        public int CantUnidades 
+        {
+            get => _cantUnidades; 
+            set 
+            {
+                if (value <= 0)
+                    _cantUnidades = int.MinValue;
+                else
+                    _cantUnidades = value; 
+            } 
+        }
         public double Resultado { get => _resultado;}
-        public string PrendaCod {set => _prendaCod = value; }
         public string Prenda { get => _prenda; set => _prenda = value; }
         public Tienda Tienda { get => _tienda; set => _tienda = value; }
+        public Vendedor Vendedor { get => _vendedor; set => _vendedor = value; }
 
-        public Cotizacion()
-        {
-            _fechaHora = DateTime.Now;
-            _resultado = double.NaN;
-        }
-        public Cotizacion(int codigoVendedor, int cantUnidades, Tienda tienda)
+        public Cotizacion(Vendedor vendedor, int cantUnidades, Tienda tienda)
         {
             // Crear identificación.
             _fechaHora = DateTime.Now;
             _resultado = double.NaN;
-            _codigoVendedor = codigoVendedor;
-            _cantUnidades = cantUnidades;
+            _vendedor = vendedor;
+            CantUnidades = cantUnidades;
             _tienda = tienda;
         }
 
         public void AlmacenarCotizacion()
         {
-            //Se llama a este método desde esta clase porque debe ser la encarga de validar el resultado,
             //si aún no se ha calculado un resutlado, no debe dejar que se almacene.
             if (_resultado != double.NaN)
             {
@@ -74,50 +76,63 @@ namespace Dominio
 
         public double CalcularCotizacion()
         {
-            double resultado;
-
-            if(_cantUnidades < _tienda.ListadoPrendas[_prendaCod])
+            if (_cantUnidades < _tienda.ListadoPrendas[_vendedor.CodigoPrenda] && _cantUnidades != int.MinValue)
             {
                 if (_camisa != null)
-                    resultado = CalcularCotizacion(_camisa);
+                    return CalcularCotizacion(_camisa);
                 else if (_pantalon != null)
-                    resultado = CalcularCotizacion(_pantalon);
+                    return CalcularCotizacion(_pantalon);
                 else
-                    resultado = -3;
+                    return -3; // Resultado para manejar el error (no se crearon los objetos).
+            }
+            else if (_cantUnidades == int.MinValue)
+            {
+                return -1; // Resultado para manejar el error (cantidad es 0 o menor).
             }
             else
-            {
-                resultado = -2;
-            }
-            return resultado;
+                return -2; // Resultado para manejar el error (stock insuficiente).
         }
 
         private double CalcularCotizacion(Camisa prenda)
         {
-            _resultado = prenda.PrecioUnitario;
+            if (prenda.PrecioUnitario.ToString() == "NaN")
+            {
+                return -1;
+            }
+            else
+            {
+                _resultado = prenda.PrecioUnitario;
 
-            if (prenda.Manga == TipoManga.corta)
-                _resultado -= _resultado * 0.1;
-            if (prenda.Cuello == TipoCuello.mao)
-                _resultado += _resultado * 0.03;
+                if (prenda.Manga == TipoManga.corta)
+                    _resultado -= _resultado * 0.1;
+                if (prenda.Cuello == TipoCuello.mao)
+                    _resultado += _resultado * 0.03;
 
-            _resultado = CalcularCalidad(prenda.Calidad);
+                _resultado = CalcularCalidad(prenda.Calidad);
 
-            return _resultado;
+                return _resultado;
+            }
         }
 
         private double CalcularCotizacion(Pantalon prenda)
         {
-            _resultado = prenda.PrecioUnitario;
-
-            if (prenda.Modelo == TipoPantalon.chupin)
+            if (prenda.PrecioUnitario.ToString() == "NaN")
             {
-                _resultado -= _resultado * 0.12;
+                return -1;
             }
+            else
+            {
+                _resultado = prenda.PrecioUnitario;
 
-            _resultado = CalcularCalidad(prenda.Calidad);
+                if (prenda.Modelo == TipoPantalon.chupin)
+                {
+                    _resultado -= _resultado * 0.12;
+                }
 
-            return _resultado;
+                _resultado = CalcularCalidad(prenda.Calidad);
+
+                return _resultado;
+            }
         }
 
         private double CalcularCalidad(TipoCalidad calidad)

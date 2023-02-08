@@ -83,12 +83,10 @@ namespace Vista
             // botonCamisa
             // 
             this.botonCamisa.AutoSize = true;
-            this.botonCamisa.Checked = true;
             this.botonCamisa.Location = new System.Drawing.Point(6, 22);
             this.botonCamisa.Name = "botonCamisa";
             this.botonCamisa.Size = new System.Drawing.Size(59, 17);
             this.botonCamisa.TabIndex = 3;
-            this.botonCamisa.TabStop = true;
             this.botonCamisa.Text = "Camisa";
             this.botonCamisa.UseVisualStyleBackColor = true;
             this.botonCamisa.CheckedChanged += new System.EventHandler(this.botonCamisa_CheckedChanged);
@@ -121,7 +119,6 @@ namespace Vista
             this.botonPantalon.Name = "botonPantalon";
             this.botonPantalon.Size = new System.Drawing.Size(67, 17);
             this.botonPantalon.TabIndex = 11;
-            this.botonPantalon.TabStop = true;
             this.botonPantalon.Text = "Pantalón";
             this.botonPantalon.UseVisualStyleBackColor = true;
             this.botonPantalon.CheckedChanged += new System.EventHandler(this.botonPantalon_CheckedChanged);

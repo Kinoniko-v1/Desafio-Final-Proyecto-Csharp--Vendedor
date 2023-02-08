@@ -10,41 +10,45 @@ namespace Dominio
 {
     public class Tienda
     {
-        private string nombre;
-        private string direccion;
+        private string _nombre;
+        private string _direccion;
+        private Vendedor vendedor;
         private Dictionary<string, int> listadoPrendas = new Dictionary<string, int>();
 
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Direccion { get => direccion; set => direccion = value; }
+        private List<Prenda> prendas = new List<Prenda>();
+
+        public string Nombre { get => _nombre; set => _nombre = value; }
+        public string Direccion { get => _direccion; set => _direccion = value; }
         public Dictionary<string, int> ListadoPrendas { get => listadoPrendas;}
 
         public Tienda(string nombre = "MayorPrendista", string direccion = "Av. Siempre Vida 321")
         {
-            this.nombre = nombre;
-            this.direccion = direccion;
+            _nombre = nombre;
+            _direccion = direccion;
 
             if(listadoPrendas.Count == 0)
             {
                 listadoPrendas = ConexionBD.LeerStock();
             }
         }
-
+        /*
         private void GuardarStock()
         {
-            listadoPrendas.Add("PSCh",750);
-            listadoPrendas.Add("PSCm",250);
-            listadoPrendas.Add("PPCh",750);
-            listadoPrendas.Add("PPCm",250);
-            
-            listadoPrendas.Add("CSCC",150);
-            listadoPrendas.Add("CSCM",100);
-            listadoPrendas.Add("CSLC",175);
-            listadoPrendas.Add("CSLM",75);
-            
-            listadoPrendas.Add("CPCC",150);
-            listadoPrendas.Add("CPCM",100);
-            listadoPrendas.Add("CPLC",175);
-            listadoPrendas.Add("CPLM",75);
+            prendas.Add(new Pantalon(TipoCalidad.Standard, TipoPantalon.chupin));
+            prendas.Add(new Pantalon(TipoCalidad.Standard, TipoPantalon.comun));
+            prendas.Add(new Pantalon(TipoCalidad.Premium, TipoPantalon.chupin));
+            prendas.Add(new Pantalon(TipoCalidad.Premium, TipoPantalon.comun));
+
+            prendas.Add(new Camisa());
+            prendas.Add(new Camisa());
+            prendas.Add(new Camisa());
+            prendas.Add(new Camisa());
+
+            prendas.Add(new Camisa());
+            prendas.Add(new Camisa());
+            prendas.Add(new Camisa());
+            prendas.Add(new Camisa());
         }
+        */
     }
 }
