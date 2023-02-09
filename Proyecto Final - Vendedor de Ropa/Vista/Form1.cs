@@ -61,7 +61,7 @@ namespace Vista
         public void MostrarResultado(string resultado)
         {
             resultadoCotizacion.Text = resultado;
-            if (int.Parse(resultado) > 0)
+            if (Convert.ToDouble(resultado) > 0)
                 Text = "¡Cotización realizada con éxito!";
             else
                 Text = "Cotización fallida. Por favor, realice la operación nuevamente.";

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Vista.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="ProyectoCorizacion.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Vista" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-    <commandLine file="Vista.exe" parameters="" />
+    <assemblyIdentity name="ProyectoCorizacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ProyectoCorizacion.exe" parameters="" />
   </entryPoint>
   <trustInfo>
     <security>
@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PsuguA4GcvX4ZDroOllzMho02fcBUcuL/Nf3hHXhAy8=</dsig:DigestValue>
+        <dsig:DigestValue>B/7hsj2yMCz50BY6yVCT4i6yME9BLnZFiyn0JC1jB0g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,23 +61,23 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lpzSdfYgEmLo8+0T/Jdvzj8qyJ8RrSchPjCowKJrrME=</dsig:DigestValue>
+        <dsig:DigestValue>QJNlHAZq72PpGIzHxC+39ADWgGUxpYTy21GjOUSXzZE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vista.exe" size="27120">
-      <assemblyIdentity name="Vista" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProyectoCorizacion.exe" size="27120">
+      <assemblyIdentity name="ProyectoCorizacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qOs9imn14YgTVjwwpHrDBEuMNRx/UpYEK/Q08H3slcU=</dsig:DigestValue>
+        <dsig:DigestValue>foL5drguHhjHf1jhvlBjoU68yeTC1cE/cIc7zoSjfwI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Vista.exe.config" size="189">
+  <file name="ProyectoCorizacion.exe.config" size="189">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />

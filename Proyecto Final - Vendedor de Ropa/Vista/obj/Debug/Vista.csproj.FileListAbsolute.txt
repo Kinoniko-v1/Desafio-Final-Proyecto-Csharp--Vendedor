@@ -18,11 +18,11 @@ C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proy
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.csproj.CopyComplete
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.exe
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.pdb
-C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\Vista.exe.config
-C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\Vista.exe.manifest
-C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\Vista.application
-C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\Vista.exe
-C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\Vista.pdb
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\ProyectoCorizacion.exe.config
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\ProyectoCorizacion.exe.manifest
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\ProyectoCorizacion.application
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\ProyectoCorizacion.exe
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\ProyectoCorizacion.pdb
 C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\Presenter.dll
 C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\Dominio.dll
 C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\bin\Debug\Presenter.pdb
@@ -33,8 +33,8 @@ C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vende
 C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.Properties.Resources.resources
 C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
 C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
-C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.exe.manifest
-C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.application
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\ProyectoCorizacion.exe.manifest
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\ProyectoCorizacion.application
 C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.csproj.CopyComplete
-C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.exe
-C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\Vista.pdb
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\ProyectoCorizacion.exe
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Vista\obj\Debug\ProyectoCorizacion.pdb
