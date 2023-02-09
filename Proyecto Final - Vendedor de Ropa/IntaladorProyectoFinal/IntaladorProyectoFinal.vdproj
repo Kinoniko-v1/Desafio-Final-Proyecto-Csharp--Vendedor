@@ -312,7 +312,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IntaladorProyectoFinal"
         "ProductCode" = "8:{4802BAE6-A9DA-48AD-AD19-87DC30FB2BC2}"
-        "PackageCode" = "8:{0C0F6797-11EB-496F-A316-F24EB6FD752B}"
+        "PackageCode" = "8:{11E29EEB-8943-4E5B-9453-21A163635C27}"
         "UpgradeCode" = "8:{9CB34E7C-29DC-4124-AF0E-BC6074FA1F06}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -432,9 +432,23 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A4348A6B8D544A41BDB3FACDD579B626"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_700DD9AA1864450E82E409BACA754062"
             {
-            "Name" = "8:CotizacionesSetup"
+            "Name" = "8:CotizacionesProyecto"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_5159BE87F5E846FB867A94F21D22B69F"
+            "Folder" = "8:_61A658A77DC245ABB91A5CE7AC56EFEE"
+            "WorkingFolder" = "8:_E090770AD1EA4DBE9001575138DC789F"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_98746204220B4845BA7CCB09A93AF3FE"
+            {
+            "Name" = "8:CotizacionesProyecto"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
