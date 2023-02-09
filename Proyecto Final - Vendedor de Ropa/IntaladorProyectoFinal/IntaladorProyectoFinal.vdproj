@@ -16,12 +16,30 @@
         "Entry"
         {
         "MsmKey" = "8:_0004EADD65F4A2D4DC610AC6F367B2AD"
-        "OwnerKey" = "8:_68A0814DE7DC4D5AA53EAD196379923F"
+        "OwnerKey" = "8:_5159BE87F5E846FB867A94F21D22B69F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_68A0814DE7DC4D5AA53EAD196379923F"
+        "MsmKey" = "8:_2BB4D075A0EEA370E361ED99DA47A54D"
+        "OwnerKey" = "8:_5159BE87F5E846FB867A94F21D22B69F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2BB4D075A0EEA370E361ED99DA47A54D"
+        "OwnerKey" = "8:_2BECCA39B5ED7E8ACD3CC8C53CE5A11F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2BECCA39B5ED7E8ACD3CC8C53CE5A11F"
+        "OwnerKey" = "8:_5159BE87F5E846FB867A94F21D22B69F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5159BE87F5E846FB867A94F21D22B69F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -34,7 +52,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_68A0814DE7DC4D5AA53EAD196379923F"
+        "OwnerKey" = "8:_5159BE87F5E846FB867A94F21D22B69F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2BECCA39B5ED7E8ACD3CC8C53CE5A11F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2BB4D075A0EEA370E361ED99DA47A54D"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -152,6 +182,68 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2BB4D075A0EEA370E361ED99DA47A54D"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Dominio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_2BB4D075A0EEA370E361ED99DA47A54D"
+                    {
+                    "Name" = "8:Dominio.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Dominio.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_E090770AD1EA4DBE9001575138DC789F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2BECCA39B5ED7E8ACD3CC8C53CE5A11F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Presenter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_2BECCA39B5ED7E8ACD3CC8C53CE5A11F"
+                    {
+                    "Name" = "8:Presenter.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Presenter.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_E090770AD1EA4DBE9001575138DC789F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -220,7 +312,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IntaladorProyectoFinal"
         "ProductCode" = "8:{4802BAE6-A9DA-48AD-AD19-87DC30FB2BC2}"
-        "PackageCode" = "8:{B9D26873-AE59-43A7-BFE1-47F6D3D999BF}"
+        "PackageCode" = "8:{0C0F6797-11EB-496F-A316-F24EB6FD752B}"
         "UpgradeCode" = "8:{9CB34E7C-29DC-4124-AF0E-BC6074FA1F06}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -340,15 +432,15 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F02997BE4C3C4A188717796BA6827F13"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A4348A6B8D544A41BDB3FACDD579B626"
             {
-            "Name" = "8:Cotizaciones"
+            "Name" = "8:CotizacionesSetup"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_68A0814DE7DC4D5AA53EAD196379923F"
+            "Target" = "8:_5159BE87F5E846FB867A94F21D22B69F"
             "Folder" = "8:_E30DC35580F347158B4983675AC045E4"
             "WorkingFolder" = "8:_E090770AD1EA4DBE9001575138DC789F"
             "Icon" = "8:"
@@ -753,9 +845,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_68A0814DE7DC4D5AA53EAD196379923F"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5159BE87F5E846FB867A94F21D22B69F"
             {
-            "SourcePath" = "8:..\\Dominio\\obj\\Release\\Dominio.dll"
+            "SourcePath" = "8:..\\Vista\\obj\\Release\\ProyectoFinal.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E090770AD1EA4DBE9001575138DC789F"
@@ -775,7 +867,7 @@
             "ProjectOutputGroupRegister" = "3:1"
             "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{E1AED377-A7D0-4051-9212-D25E45CE07B4}"
+            "OutputProjectGuid" = "8:{06A5F588-CCD1-48AD-85B3-8751717043FF}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {
