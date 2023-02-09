@@ -7,3 +7,12 @@ C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proy
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Release\Presenter.csproj.CopyComplete
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Release\Presenter.dll
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Release\Presenter.pdb
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\bin\Release\Presenter.dll
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\bin\Release\Presenter.pdb
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\bin\Release\Dominio.dll
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\bin\Release\Dominio.pdb
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Release\Presenter.csproj.AssemblyReference.cache
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Release\Presenter.csproj.CoreCompileInputs.cache
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Release\Presenter.csproj.CopyComplete
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Release\Presenter.dll
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Presenter\obj\Release\Presenter.pdb

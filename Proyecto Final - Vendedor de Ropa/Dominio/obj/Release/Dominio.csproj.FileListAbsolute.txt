@@ -4,3 +4,8 @@ C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proy
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Dominio\obj\Release\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Dominio\obj\Release\Dominio.dll
 C:\Users\Kinoniko\Desktop\proyecto c#\Desaf-o-Final---Proyecto-C---Vendedor\Proyecto Final - Vendedor de Ropa\Dominio\obj\Release\Dominio.pdb
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Dominio\bin\Release\Dominio.dll
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Dominio\bin\Release\Dominio.pdb
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Dominio\obj\Release\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Dominio\obj\Release\Dominio.dll
+C:\Users\Kinoniko\Desktop\Proyecto final C#\Desafio-Final-Proyecto-Csharp--Vendedor\Proyecto Final - Vendedor de Ropa\Dominio\obj\Release\Dominio.pdb
