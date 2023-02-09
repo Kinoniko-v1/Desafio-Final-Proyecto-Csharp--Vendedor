@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Dominio.TiposDePrenda;
+﻿using static Dominio.TiposDePrenda;
 
 namespace Dominio
 {
-    public class Pantalon : Prenda
+    internal class Pantalon : Prenda
     {
         private TipoPantalon modelo;
 
-        public Pantalon(TipoCalidad calidad, double precioUnitario, bool esChupin) 
+        internal Pantalon(TipoCalidad calidad, double precioUnitario, bool esChupin) 
             : base(calidad, precioUnitario)
         {
             if (esChupin)
@@ -20,6 +15,6 @@ namespace Dominio
                 this.modelo = TipoPantalon.comun;
         }
 
-        internal TipoPantalon Modelo { get => modelo; set => modelo = value; }
+        internal TipoPantalon Modelo { get => modelo;}
     }
 }

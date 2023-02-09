@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
@@ -49,7 +46,7 @@ namespace Dominio
             }
             return msj;
         }
-        public static void Almacenar(Cotizacion cotizacion)
+        internal static void Almacenar(Cotizacion cotizacion)
         {
             string fechaHora = "@fechaHora", codVendedor = "@codVendedor",
                 prenda = "@prenda", cantCotizada = "@cantCotizada", resultado = "@resultado";
@@ -66,8 +63,8 @@ namespace Dominio
             comando.Parameters.Add(resultado, SqlDbType.Money);
 
             comando.Parameters[fechaHora].Value = cotizacion.FechaHora.ToString();
-            comando.Parameters[codVendedor].Value = cotizacion.CodigoVendedor;
-            comando.Parameters[prenda].Value = cotizacion.Prenda;  // HAY QUE NORMALIZAR
+            comando.Parameters[codVendedor].Value = cotizacion.Vendedor.CodigoVendedor;
+            comando.Parameters[prenda].Value = cotizacion.Prenda;
             comando.Parameters[cantCotizada].Value = cotizacion.CantUnidades;
             comando.Parameters[resultado].Value = cotizacion.Resultado;
 
@@ -144,7 +141,7 @@ namespace Dominio
             SqlCommand comando = new SqlCommand(cadena, conexion);
             try
             {
-                int xd = comando.ExecuteNonQuery();
+                comando.ExecuteNonQuery();
             }
             catch (Exception)
             {

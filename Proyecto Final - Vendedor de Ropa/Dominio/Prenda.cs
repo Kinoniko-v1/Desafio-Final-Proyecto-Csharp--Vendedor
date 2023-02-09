@@ -7,7 +7,7 @@ using static Dominio.TiposDePrenda;
 
 namespace Dominio
 {
-    public abstract class Prenda
+    internal abstract class Prenda
     {
         protected TipoCalidad calidad;
         protected double precioUnitario;
@@ -16,11 +16,22 @@ namespace Dominio
         internal Prenda(TipoCalidad calidad, double precioUnitario)
         {
             this.calidad = calidad;
-            this.precioUnitario = precioUnitario;
+            PrecioUnitario = precioUnitario;
         }
 
         internal TipoCalidad Calidad { get => calidad; set => calidad = value; }
-        internal double PrecioUnitario { get => precioUnitario; set => precioUnitario = value; }
+        internal double PrecioUnitario
+        {
+            get => precioUnitario;
+            set
+            {
+                if (value <= 0)
+                    precioUnitario = double.NaN;
+                else
+                    precioUnitario = value;
+            }
+        }
+                
         internal int CantStock { get => cantStock; set => cantStock = value; }
     }
 }

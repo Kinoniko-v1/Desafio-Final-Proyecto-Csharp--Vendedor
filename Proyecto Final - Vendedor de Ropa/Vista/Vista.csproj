@@ -75,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -94,6 +95,21 @@
       <Project>{A9A289C4-1E40-45F5-A04C-25E66021DB05}</Project>
       <Name>Presenter</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-voluta-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-transacción-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-transacción-material-sharp-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-transacción-material-sharp-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-jake-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
