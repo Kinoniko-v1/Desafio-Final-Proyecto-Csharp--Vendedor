@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ProyectoFinal.exe" version="1.0.0.2" publicKeyToken="14aeefea68621c9e" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ProyectoFinal" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ProyectoFinal.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
+          nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Si desea usar la virtualización de archivos y del Registro para la
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Dominio.dll" size="12800">
+      <assemblyIdentity name="Dominio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4H4eMFGwGVdhBcdefKMZq8icCrSXydjCbHu3VFFQljI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Presenter.dll" size="6144">
+      <assemblyIdentity name="Presenter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>CUAYe1yfIJ6yVEFVA5QgZuqKAX0vkRlmXWhE18kZ514=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProyectoFinal.exe" size="26096">
+      <assemblyIdentity name="ProyectoFinal" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>naKhD7TSDkOWh85IpTHHJGRRTkWXaz1kqxHrpp+YtR8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ProyectoFinal.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-OTGU6F6\Kinoniko" issuerKeyHash="7c7e763babbe3734157ffa6448c131d77ec7fcdc" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>HD5oBmgL34V94pcYQhx9D3Kw+qVdm4dJ9At7q/K+lR8=</DigestValue></Reference></SignedInfo><SignatureValue>ko18GcCb5ZXbSulNQk9nKQsBz/pocCwFvDlO8tQ0z9Z0ENp8sF97FMHUp6QMV3oL5ZWJwk5WuG/5HTLYqUn2tO2vVOyi5Q050pDM7FlcCqf8XEQx6zmc+26iT2o7UQa+PHGMxiUXEmCkFhiOFG7lugOwHd1Kfgz110atm1NfEu8=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>1WKzQz905CgviuydY75sFThKzDpa5Ddp4KSc0HJQHyQMxQWVN/70zB9LYWRpdm3f4QVRThISAmXTYDT85VpJ2j7V9irwqI7xYYhy8RjCskeq4Ue3HblKyeyb2Gddi1agadMYWC8mhK7s80xtw8pzXM9bNg9OrtxR5bcgdRXRoiU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="1f95bef2ab7b0bf449879b5da5fab0720f7d1c421897e27d85df0b6806683e1c" Description="" Url=""><as:assemblyIdentity name="ProyectoFinal.exe" version="1.0.0.2" publicKeyToken="14aeefea68621c9e" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-OTGU6F6\Kinoniko</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>GUeDKTrS0A1PBmMNeOQCGgsxJWZB05zALYH/uYp1z+k=</DigestValue></Reference></SignedInfo><SignatureValue>h8+OVo1zmnkjCIyaLw0e/xI4k8AetHfa6YlAP0E5d2CPQ2AHNvSagUOwjtZkJAFqRdl2Ai0dClyZjRZa5KWR3nRMLtj5rpKLnGR3TEzqSOliJIDon5OtXrdhqLK/rbjx4kjwch75UZNTf0PwmgJ/OeVyDCiR+FnB24+M/y4bI+4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>1WKzQz905CgviuydY75sFThKzDpa5Ddp4KSc0HJQHyQMxQWVN/70zB9LYWRpdm3f4QVRThISAmXTYDT85VpJ2j7V9irwqI7xYYhy8RjCskeq4Ue3HblKyeyb2Gddi1agadMYWC8mhK7s80xtw8pzXM9bNg9OrtxR5bcgdRXRoiU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB+TCCAWKgAwIBAgIQLlx6/g8Tr6NKTH+UPVqSsTANBgkqhkiG9w0BAQsFADA7MTkwNwYDVQQDHjAARABFAFMASwBUAE8AUAAtAE8AVABHAFUANgBGADYAXABLAGkAbgBvAG4AaQBrAG8wHhcNMjMwMjA5MTYzNTM0WhcNMjQwMjA5MjIzNTM0WjA7MTkwNwYDVQQDHjAARABFAFMASwBUAE8AUAAtAE8AVABHAFUANgBGADYAXABLAGkAbgBvAG4AaQBrAG8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANVis0M/dOQoL4rsnWO+bBU4Ssw6WuQ3aeCknNByUB8kDMUFlTf+9MwfS2FkaXZt3+EFUU4SEgJl02A0/OVaSdo+1fYq8KiO8WGIcvEYwrJHquFHtx25Ssnsm9hnXYtWoGnTGFgvJoSu7PNMbcPKc1zPWzYPTq7cUeW3IHUV0aIlAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAjGzHHifBkCyqfN0CkIyCO+YpVs59k/T47dq9IbkOmWuADYxzczZXtxH5DdLsC0qFSVoEAtwjmF1Ddk68FhL0DPvUnZ604hjLSkOZzy/sUevgsYXC/roOBSdpbsIRKn290QQB6nkDcdXAczYmudZW2GabwTlvjkzt04/D9dZGB0A=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
