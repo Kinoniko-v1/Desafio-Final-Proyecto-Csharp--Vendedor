@@ -7,7 +7,7 @@
     <ProjectGuid>{06A5F588-CCD1-48AD-85B3-8751717043FF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Vista</RootNamespace>
-    <AssemblyName>Vista</AssemblyName>
+    <AssemblyName>ProyectoFinal</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
