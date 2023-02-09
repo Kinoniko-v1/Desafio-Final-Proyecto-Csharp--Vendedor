@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static Dominio.TiposDePrenda;
 
 namespace Dominio
 {
-    public class Cotizacion
+    internal class Cotizacion
     {
         private DateTime _fechaHora;
 
@@ -22,8 +17,8 @@ namespace Dominio
 
         private double _resultado;
 
-        public DateTime FechaHora { get => _fechaHora;}
-        public int CantUnidades 
+        internal DateTime FechaHora { get => _fechaHora;}
+        internal int CantUnidades 
         {
             get => _cantUnidades; 
             set 
@@ -34,12 +29,12 @@ namespace Dominio
                     _cantUnidades = value; 
             } 
         }
-        public double Resultado { get => _resultado;}
-        public string Prenda { get => _prenda; set => _prenda = value; }
-        public Tienda Tienda { get => _tienda; set => _tienda = value; }
-        public Vendedor Vendedor { get => _vendedor; set => _vendedor = value; }
+        internal double Resultado { get => _resultado;}
+        internal string Prenda { get => _prenda; set => _prenda = value; }
+        internal Tienda Tienda { get => _tienda; set => _tienda = value; }
+        internal Vendedor Vendedor { get => _vendedor; set => _vendedor = value; }
 
-        public Cotizacion(Vendedor vendedor, int cantUnidades, Tienda tienda)
+        internal Cotizacion(Vendedor vendedor, int cantUnidades, Tienda tienda)
         {
             // Crear identificación.
             _fechaHora = DateTime.Now;
@@ -49,7 +44,7 @@ namespace Dominio
             _tienda = tienda;
         }
 
-        public void AlmacenarCotizacion()
+        internal void AlmacenarCotizacion()
         {
             //si aún no se ha calculado un resutlado, no debe dejar que se almacene.
             if (_resultado != double.NaN)
@@ -58,7 +53,7 @@ namespace Dominio
             }
         }
 
-        public void CrearPrenda(string prenda, string calidad, double precioUnitario, bool mao, bool corta, bool chupin)
+        internal void CrearPrenda(string prenda, string calidad, double precioUnitario, bool mao, bool corta, bool chupin)
         {
             TipoCalidad calidadRopa = calidad == "standard" ? TipoCalidad.Standard : TipoCalidad.Premium;
 
@@ -74,9 +69,9 @@ namespace Dominio
             }
         }
 
-        public double CalcularCotizacion()
+        internal double CalcularCotizacion()
         {
-            if (_cantUnidades < _tienda.ListadoPrendas[_vendedor.CodigoPrenda] && _cantUnidades != int.MinValue)
+            if (_cantUnidades <= _tienda.ListadoPrendas[_vendedor.CodigoPrenda] && _cantUnidades != int.MinValue)
             {
                 if (_camisa != null)
                     return CalcularCotizacion(_camisa);

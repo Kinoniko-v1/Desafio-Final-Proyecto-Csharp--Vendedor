@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
@@ -49,7 +46,7 @@ namespace Dominio
             }
             return msj;
         }
-        public static void Almacenar(Cotizacion cotizacion)
+        internal static void Almacenar(Cotizacion cotizacion)
         {
             string fechaHora = "@fechaHora", codVendedor = "@codVendedor",
                 prenda = "@prenda", cantCotizada = "@cantCotizada", resultado = "@resultado";

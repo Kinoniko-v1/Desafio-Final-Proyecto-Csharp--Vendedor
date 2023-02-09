@@ -7,7 +7,7 @@ using static Dominio.TiposDePrenda;
 
 namespace Dominio
 {
-    public abstract class Prenda
+    internal abstract class Prenda
     {
         protected TipoCalidad calidad;
         protected double precioUnitario;

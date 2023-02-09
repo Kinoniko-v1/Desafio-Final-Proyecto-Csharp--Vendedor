@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class TiposDePrenda
+    static internal class TiposDePrenda
     {
-        public enum TipoPrenda { pantalon, camisa};
-        public enum TipoCalidad { Standard, Premium };
-        public enum TipoManga { larga, corta };
-        public enum TipoCuello { comun, mao };
-        public enum TipoPantalon { comun, chupin };
+        internal enum TipoPrenda { pantalon, camisa};
+        internal enum TipoCalidad { Standard, Premium };
+        internal enum TipoManga { larga, corta };
+        internal enum TipoCuello { comun, mao };
+        internal enum TipoPantalon { comun, chupin };
     }
 }

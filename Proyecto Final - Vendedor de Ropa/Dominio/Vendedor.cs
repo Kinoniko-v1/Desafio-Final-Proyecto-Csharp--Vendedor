@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dominio
 {
@@ -24,10 +20,9 @@ namespace Dominio
             _tienda = tienda;
         }
 
-        public int CodigoVendedor { get => _codigoVendedor; set => _codigoVendedor = value; }
-        public string Nombre { get => _nombre; set => _nombre = value; }
-        public string Apellido { get => _apellido; set => _apellido = value; }
-        public Cotizacion Cotizacion { get => _cotizacion; set => _cotizacion = value; }
+        public int CodigoVendedor { get => _codigoVendedor;}
+        public string Nombre { get => _nombre;}
+        public string Apellido { get => _apellido;}
         public string CodigoPrenda { get => _codigoPrenda; set => _codigoPrenda = value; }
 
         private int GenerarCodigo()

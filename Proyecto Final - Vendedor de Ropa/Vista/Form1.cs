@@ -1,12 +1,6 @@
 ﻿using Presenter;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Vista
@@ -67,10 +61,10 @@ namespace Vista
         public void MostrarResultado(string resultado)
         {
             resultadoCotizacion.Text = resultado;
-            if (resultado != "-1")
+            if (int.Parse(resultado) > 0)
                 Text = "¡Cotización realizada con éxito!";
             else
-                Text = "Cotización fallida, cantidad ingresada superior al stock disponible.";
+                Text = "Cotización fallida. Por favor, realice la operación nuevamente.";
         }
         #endregion
 
