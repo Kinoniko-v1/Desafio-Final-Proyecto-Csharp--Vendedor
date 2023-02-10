@@ -7,7 +7,6 @@ Antes de Ejectuar el programa:
 Para instalar el programa:
 -Dentro de la carpeta principal del proyecto entrar en "Proyecto Final - Vendedor de Ropa".
 -Luego en "Instalador" y finalmente en "Release" para ejecutar el setup.
--De ser necesario instalar SQL de la carpeta en esa misma direccion.
 
 Para que funcione la base de datos:
 -Iniciar en SSMS una DataBase Engine con nombre "localhost" (posiblemente no sea necesario).
